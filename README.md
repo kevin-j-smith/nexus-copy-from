@@ -18,20 +18,21 @@ Example plugin for "Copying artifacts between local repositories".
 
 Example session, copying artifact from one repository to another:
 
-URL Template: http://localhost:8081/nexus/service/local/repositories/<<targetRepository>>/copyfrom
+###URL Template: 
+http://localhost:8081/nexus/service/local/repositories/<<targetRepository>>/copyfrom
 
-Example copy from using GET. Copyies one artifact.
+###Example copy from using GET. Copyies one artifact.
 curl -H "Accept:application/json" http://localhost:8081/nexus/service/local/repositories/staging-one/copyfrom?g=com.ibm.informix&a=ifxjdbc&version=4.10.7-SNAPSHOT&r=snapshots
 {"result":"SUCCESSFUL"}
 
-Example copy from using PUT.  Copyies one artifact.
+###Example copy from using PUT.  Copyies one artifact.
 curl -H "Accept:application/json" -H "Content-Type:application/json" -X PUT --data-binary '{"groupId":"com.ibm.informix","artifactId":"ifxjdbc","version":"4.10.7-SNAPSHOT","repositoryId":"snapshots"}' http://localhost:8081/nexus/service/local/repositories/staging-one/copyfrom
 
-Example copy from using PUT.  Copyies multiple artifacts.
+###Example copy from using PUT.  Copyies multiple artifacts.
 curl -H "Accept:application/json" -H "Content-Type:application/json" -X PUT --data-binary '[{"groupId":"com.ibm.informix","artifactId":"ifxjdbc","version":"4.10.7-SNAPSHOT","repositoryId":"snapshots"},{"groupId":"com.ibm.informix","artifactId":"ifxjdbcx","version":"4.10.7-SNAPSHOT","repositoryId":"snapshots"}]' http://localhost:8081/nexus/service/local/repositories/staging-one/copyfrom
 
-All options:
-GET's query parameters
+###All options:
+#####GET's query parameters
 g	GroupId of the artifact (required)
 a	ArtifactId of the artifact (required)
 v	Version of the artifact (required) Supports resolving of "LATEST", "RELEASE" and snapshot versions ("1.0-SNAPSHOT") too.
@@ -40,7 +41,7 @@ p	Packaging type of the artifact (optional)
 c	Classifier of the artifact (optional)
 e	Extension of the artifact (optional)
 
-PUT's json keys
+#####PUT's json keys
 groupId  	GroupId of the artifact (required)
 artifactId	ArtifactId of the artifact (required)
 version  	Version of the artifact (required) Supports resolving of "LATEST", "RELEASE" and snapshot versions ("1.0-SNAPSHOT") too.
