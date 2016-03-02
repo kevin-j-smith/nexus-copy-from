@@ -33,19 +33,19 @@ curl -H "Accept:application/json" -H "Content-Type:application/json" -X PUT --da
 
 ##All options:
 ####GET's query parameters
-######g GroupId of the artifact (required) 
-######a ArtifactId of the artifact (required) 
-######v Version of the artifact (required) Supports resolving of "LATEST", "RELEASE" and snapshot versions ("1.0-SNAPSHOT") too. 
-######r RepositoryId of the source repository that the artifact is contained in (required) 
-######p Packaging type of the artifact (optional) 
-######c Classifier of the artifact (optional) 
-######e Extension of the artifact (optional) 
+######g - GroupId of the artifact (required) 
+######a - ArtifactId of the artifact (required) 
+######v - Version of the artifact (required) Supports resolving of "LATEST", "RELEASE" and snapshot versions ("1.0-SNAPSHOT") too. 
+######r - RepositoryId of the source repository that the artifact is contained in (required) 
+######p - Packaging type of the artifact (optional) 
+######c - Classifier of the artifact (optional) 
+######e - Extension of the artifact (optional) 
 
 ####PUT's json keys
-######groupId GroupId of the artifact (required) 
-######artifactId ArtifactId of the artifact (required) 
-######version Version of the artifact (required) Supports resolving of "LATEST", "RELEASE" and snapshot versions ("1.0-SNAPSHOT") too. 
-######repositoryId RepositoryId of the source repository that the artifact is contained in (required) 
-######packaging Packaging type of the artifact (optional) 
-######classifier Classifier of the artifact (optional) 
-######extension Extension of the artifact (optional) 
+######groupId - GroupId of the artifact (required) 
+######artifactId - ArtifactId of the artifact (required) 
+######version - Version of the artifact (required) Supports resolving of "LATEST", "RELEASE" and snapshot versions ("1.0-SNAPSHOT") too. 
+######repositoryId - RepositoryId of the source repository that the artifact is contained in (required) 
+######packaging - Packaging type of the artifact (optional) 
+######classifier - Classifier of the artifact (optional) 
+######extension - Extension of the artifact (optional) 
