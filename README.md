@@ -40,7 +40,7 @@ curl -H "Accept:application/json" -H "Content-Type:application/json" -X PUT --da
 ##All options:
 ####GET's query parameters
 | Query Parameter | Description |
-| --------------- | ___________ |
+| --------------- | ----------- |
 | g | GroupId of the artifact (required) 
 | a | ArtifactId of the artifact (required) 
 | v | Version of the artifact (required) Supports resolving of "LATEST", "RELEASE" and snapshot versions ("1.0-SNAPSHOT") too. 
