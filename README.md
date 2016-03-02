@@ -21,23 +21,23 @@ Example session, copying artifact from one repository to another:
 ###URL Template: 
 http://localhost:8081/nexus/service/local/repositories/<<targetRepository>>/copyfrom
 
-###Example copy from using GET. Copies one artifact.
+####Example copy from using GET. Copies one artifact.
 ```curl
 curl -H "Accept:application/json" http://localhost:8081/nexus/service/local/repositories/staging-one/copyfrom?g=com.ibm.informix&a=ifxjdbc&version=4.10.7-SNAPSHOT&r=snapshots
 ```
 {"result":"SUCCESSFUL"}
 
-###Example copy from using PUT.  Copies one artifact.
+####Example copy from using PUT.  Copies one artifact.
 ```curl
 curl -H "Accept:application/json" -H "Content-Type:application/json" -X PUT --data-binary '{"groupId":"com.ibm.informix","artifactId":"ifxjdbc","version":"4.10.7-SNAPSHOT","repositoryId":"snapshots"}' http://localhost:8081/nexus/service/local/repositories/staging-one/copyfrom
 ```
 
-###Example copy from using PUT.  Copies multiple artifacts.
+####Example copy from using PUT.  Copies multiple artifacts.
 ```curl
 curl -H "Accept:application/json" -H "Content-Type:application/json" -X PUT --data-binary '[{"groupId":"com.ibm.informix","artifactId":"ifxjdbc","version":"4.10.7-SNAPSHOT","repositoryId":"snapshots"},{"groupId":"com.ibm.informix","artifactId":"ifxjdbcx","version":"4.10.7-SNAPSHOT","repositoryId":"snapshots"}]' http://localhost:8081/nexus/service/local/repositories/staging-one/copyfrom
 ```
 
-##All options:
+
 ####GET's query parameters
 | Query Parameter | Description |
 | --------------- | ----------- |
