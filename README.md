@@ -59,3 +59,10 @@ curl -H "Accept:application/json" -H "Content-Type:application/json" -X PUT --da
 | packaging | Packaging type of the artifact (optional) 
 | classifier | Classifier of the artifact (optional) 
 | extension | Extension of the artifact (optional) 
+
+
+###Problems issues:
+
+I tried this plugin on 2.11.2-06 and noticed PUT with an array did not work.  It would copy the frist artifact but I would get a HTTP 500 Internal Server error and the nexus error log said "Caused by: java.nio.file.NoSuchFileException: <<storage directory>>/<<target repository>>/.nexus/tmp/<<gav>>.    Therefore, I switched to running the request in a loop. 
+
+I did not find this issue with 2.12.0-01.   I was able to successfully run a PUT with an array.  
